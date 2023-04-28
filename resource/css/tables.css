@@ -88,9 +88,34 @@
 
 header{
     max-height:10vh;
+    background-color: #042446;
+}
+main {
+        height: 90vh;
+        background-color: #2a8fc7;
 }
 footer {
         max-height: 10vh;
+        background-color: #042446;
+}
+.ccard {
+        background-color: #8cbee0;
+}
+.chead {
+        background-color: #053f67;
+        color: white;
+}
+.inner-chead {
+        background-color: #16618d;
+}
+.inner-cbody {
+        background-color: #2a8fc7;
+}
+.card-title {
+        color: white;
+}
+.card {
+        border: none;
 }
 .list-main {
         max-height: 75vh;
@@ -101,6 +126,19 @@ footer {
 }
 .profpic {
         width: 100px;
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+        width: 20px;
+}
+::-webkit-scrollbar-track {
+        background-color: #8cbee0;
+}
+::-webkit-scrollbar-thumb {
+        background-color:  #16618d;
+}
+::-webkit-scrollbar-thumb:hover {
+        background-color: #0d364e;
 }
 
 .alumni{

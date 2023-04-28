@@ -79,13 +79,13 @@ public function viewAccounts(){
   $result = $data->fetchAll(PDO::FETCH_ASSOC);
 
   foreach ($result as $data){
-    echo '<div class="card">
-    <h5 class="card-header">'.$data['name'].'</h5>
-    <div class="card-body">';
+    echo '<div class="card rounded">
+    <h5 class="inner-chead card-header" style="color:white;">'.$data['name'].'</h5>
+    <div class="inner-cbody card-body">';
     echo '<img class="rounded-circle img-thumbnail float-left profpic" src="resource/img/user.jpg" alt="IMG"';
     // echo '<img class="rounded-circle img-thumbnail float-left" alt="IMG" src="data:"'.$data['mm'].'";charset="utf-8";base64,"'.base64_encode($data['dp']).'">';
-    echo '<h5 class="card-title">They manage these departments: '.$data['colleges'].'</h5>
-      <br><br><p class="card-text"><strong>Date Joined: </strong>'.$data['joined'].'</p>
+    echo '<h5 class="card-title"><span class="text-white">They manage these departments: '.$data['colleges'].'</span></h5>
+      <br><br><p class="card-text text-white"><strong>Date Joined: </strong>'.$data['joined'].'</p>
     </div>
   </div> <br>';
   }
