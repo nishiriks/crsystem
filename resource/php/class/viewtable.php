@@ -71,5 +71,26 @@ public function viewApproveTable(){
 
 }
 
+public function viewAccounts(){
+  $con = $this->con();
+  $sql = "SELECT * FROM `tbl_accounts` ";
+  $data= $con->prepare($sql);
+  $data->execute();
+  $result = $data->fetchAll(PDO::FETCH_ASSOC);
+
+  foreach ($result as $data){
+    echo '<div class="card">
+    <h5 class="card-header">'.$data['name'].'</h5>
+    <div class="card-body">';
+    echo '<img class="rounded-circle img-thumbnail float-left profpic" src="resource/img/user.jpg" alt="IMG"';
+    // echo '<img class="rounded-circle img-thumbnail float-left" alt="IMG" src="data:"'.$data['mm'].'";charset="utf-8";base64,"'.base64_encode($data['dp']).'">';
+    echo '<h5 class="card-title">They manage these departments: '.$data['colleges'].'</h5>
+      <br><br><p class="card-text"><strong>Date Joined: </strong>'.$data['joined'].'</p>
+    </div>
+  </div> <br>';
+  }
 
 }
+
+}
+?>

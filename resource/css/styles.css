@@ -66,9 +66,7 @@
     color:#DC65A1;
     font-weight: bold;
 }
-.bg2{
 
-}
 .btn.ceubtn,
 .btn.ceubtn:hover,
 .btn.ceubtn:active
@@ -89,9 +87,20 @@
 }
 
 header{
-    height:100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
-    background-size: cover;
+    max-height:10vh;
+}
+footer {
+        max-height: 10vh;
+}
+.list-main {
+        max-height: 75vh;
+        overflow-y: hidden;
+}
+.inner-list {
+        overflow-y: scroll;
+}
+.profpic {
+        width: 100px;
 }
 
 .alumni{
