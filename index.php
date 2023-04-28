@@ -46,7 +46,7 @@ $accounts = new viewTable();
                   </div>
                   <div class="card-body">
                       <div class="container">
-                        <p class="lead text-center">This Portal is for Teachers  only. Proceed at your own risk. If you lacked the necessary credentials, Proceed to Register. Otherwise, proceed to Login.</p>
+                        <p class="lead text-center">This Portal is for Teachers only. Proceed at your own risk. If you lacked the necessary credentials, Proceed to Register. Otherwise, proceed to Login.</p>
                       </div>
                       <form class="text-center" method="post">
                           <a class="btn btn-info w-25" href="register.php" role="button">Register</a>
@@ -118,7 +118,7 @@ $accounts = new viewTable();
    <div class="container text-center">
        <div class="row">
            <div class="col col-sm-5 text-left">
-               <small>Copyright &copy;Westview University     All Rights Reserve 2023</small>
+               <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
            </div>
            <div class="col text-right">
                <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>

@@ -14,15 +14,26 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.p
   <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
 </head>
 <body>
-        <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
-          <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
+  <nav class="barnav navbar navbar-dark shadow navbar-expand-md ">
+        <div class="container-fluid">
+          <div class="logo center">
+            <a href="#">
+              <img src="resource/img/logo2.png" height="115" class="d-inline-block align-top alt="alt="mdb logo"><h3 class="ib">
+            </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link navitem" href="login.php">Home</a>
+              <a class="nav-item nav-link navitem" href="changepassword.php">Change Password</a>
+              <a class="nav-item nav-link navitem" href="updateprofile.php">Update Profile</a>
+              <a class="nav-item nav-link navitem" href="logout.php">Log out</a>
+            </div>
+          </div>
+        </div>
+          </nav>
            <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-8 ">
@@ -45,10 +56,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.p
                       <div class="container text-center">
                           <div class="row">
                               <div class="col col-sm-5 text-left">
-                                  <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
+                                  <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
                               </div>
                               <div class="col text-right">
-                                  <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
+                                  <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
                               </div>
                           </div>
                       </div>

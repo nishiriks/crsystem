@@ -130,10 +130,10 @@ $view = new view;
    <div class="container text-center">
        <div class="row">
            <div class="col col-sm-5 text-left">
-               <small>Copyright &copy;Westview University     All Rights Reserve 2023</small>
+               <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
            </div>
            <div class="col text-right">
-               <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
+               <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Wiliam Wyler.</small>
            </div>
        </div>
    </div>
