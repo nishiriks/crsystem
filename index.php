@@ -34,7 +34,7 @@ $accounts = new viewTable();
               </div>
           </div>
         </nav>
-        
+
     <main class="container-fluid">
         <div>
           <div class="row">
@@ -46,7 +46,7 @@ $accounts = new viewTable();
                   </div>
                   <div class="card-body">
                       <div class="container">
-                        <p class="lead text-center">This Portal is for Teachers only. If you have an account, then proceed to Login. If the opposite has occured, proceed to Register.</p>
+                        <p class="lead text-center">This Portal is for Teachers  only. Proceed at your own risk. If you lacked the necessary credentials, Proceed to Register. Otherwise, proceed to Login.</p>
                       </div>
                       <form class="text-center" method="post">
                           <a class="btn btn-info w-25" href="register.php" role="button">Register</a>
@@ -71,10 +71,10 @@ $accounts = new viewTable();
                       <span class="h3">Profile</span>
                     </div>
                     <div class="card-body">
-                      <?php 
+                      <?php
                         $user = new user();
                         if ($user->isLoggedIn()) {
-                          echo '<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sunt quam reiciendis optio ex, aliquid in cum quibusdam deleniti earum. Reiciendis, nisi. Consequuntur itaque odio aspernatur tempora odit delectus a!</p>';
+                          echo '<p class="lead">WELCOME USER! HOW MAY I BE OF SERVICE.</p>';
                           echo '<div class="container d-flex">';
                           profilePic();
                           echo '
@@ -90,7 +90,7 @@ $accounts = new viewTable();
                           <div class="container">
                               <p class="lead text-center">
                                 The user&#39;s profile will only be visible if they have logged in to their own account. If you have any questions/problems feel free to
-                                <a class="text-white" href="#">contact us here.</a> 
+                                <a class="text-white" href="#">contact us here.</a>
                               </p>
                           </div>
                           ';
@@ -107,7 +107,7 @@ $accounts = new viewTable();
                     <span class="h3">List of Accounts</span>
                 </div>
                 <div class="card-body text-center inner-list">
-                    <?php $accounts->viewAccounts() ?>      
+                    <?php $accounts->viewAccounts() ?>
                 </div>
               </div>
             </div>
