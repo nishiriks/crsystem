@@ -12,19 +12,29 @@ $accounts = new viewTable();
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css"  href="resource/css/tables.css">
+  <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar shadow-sm">
-          <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top "
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
+    <nav class="barnav navbar navbar-dark shadow navbar-expand-md ">
+          <div class="container-fluid">
+            <div class="logo center">
+              <a href="#">
+                <img src="resource/img/logo2.png" height="115" class="d-inline-block align-top alt="alt="mdb logo"><h3 class="ib">
+              </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link navitem" href="login.php">Home</a>
+                <a class="nav-item nav-link navitem" href="changepassword.php">Change Password</a>
+                <a class="nav-item nav-link navitem" href="updateprofile.php">Update Profile</a>
+                <a class="nav-item nav-link navitem" href="logout.php">Log out</a>
+              </div>
+          </div>
         </nav>
-    </header>
+        
     <main class="container-fluid">
         <div>
           <div class="row">
@@ -104,18 +114,18 @@ $accounts = new viewTable();
           </div>
         </div>
     </main>
-    <footer id="sticky-footer" class="py-4 text-white-50 fixed-bottom">
-      <div class="container text-center">
-          <div class="row">
-              <div class="col col-sm-5 text-left">
-                  <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
-              </div>
-              <div class="col text-right">
-                  <small>Created by: Krizia Lleva, Angelique Gabriel, Emman Siva, Roderick Nucup Jr., Marcus Bustos, Ralph Cruz</small>
-              </div>
-          </div>
-      </div>
-    </footer>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom  slide-in-right">
+   <div class="container text-center">
+       <div class="row">
+           <div class="col col-sm-5 text-left">
+               <small>Copyright &copy;Westview University     All Rights Reserve 2023</small>
+           </div>
+           <div class="col text-right">
+               <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
+           </div>
+       </div>
+   </div>
+ </footer>
     <script src="vendor/js/jquery.js"></script>
     <script src="vendor/js/popper.js"></script>
     <script src="vendor/js/bootstrap.min.js"></script>
