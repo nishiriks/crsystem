@@ -15,7 +15,7 @@ $accounts = new viewTable();
   <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
 </head>
 <body>
-    <nav class="barnav navbar navbar-dark shadow navbar-expand-md ">
+    <nav class="barnav navbar navbarlight shadow navbar-expand-md ">
           <div class="container-fluid">
             <div class="logo center">
               <a href="#">
@@ -35,7 +35,7 @@ $accounts = new viewTable();
           </div>
         </nav>
 
-    <main class="container-fluid">
+    <main class="container-fluid bg-info">
         <div>
           <div class="row">
             <div class="col-6">
@@ -49,16 +49,16 @@ $accounts = new viewTable();
                         <p class="lead text-center">This Portal is for Teachers only. Proceed at your own risk. If you lacked the necessary credentials, Proceed to Register. Otherwise, proceed to Login.</p>
                       </div>
                       <form class="text-center" method="post">
-                          <a class="btn btn-info w-25" href="register.php" role="button">Register</a>
+                          <a class="btn btn-info w-25" href="register.php" role="button"><strong>Register</strong></a>
                           <?php
                             $user = new user();
                             if ($user->isLoggedIn()) {
-                              echo '<button class="btn btn-info w-25" name="logout">Logout</button>';
+                              echo '<button class="btn btn-info w-25" name="logout"><strong>Logout</strong></button>';
                                 if (isset($_POST['logout'])) {
                                   $user->logout();
                                 }
                             } else {
-                              echo '<a class="btn btn-info w-25" href="login.php" role="button">Login</a>';
+                              echo '<a class="btn btn-info w-25" href="login.php" role="button"><strong>Login</strong></a>';
 
                             }
                           ?>
@@ -70,11 +70,11 @@ $accounts = new viewTable();
                     <div class="chead card-header text-center">
                       <span class="h3">Profile</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body ">
                       <?php
                         $user = new user();
                         if ($user->isLoggedIn()) {
-                          echo '<p class="lead">WELCOME USER! HOW MAY I BE OF SERVICE.</p>';
+                          echo '<p class="leadfont-italic"><strong>WELCOME USER! HOW MAY I BE OF SERVICE.</strong></p>';
                           echo '<div class="container d-flex">';
                           profilePic();
                           echo '
@@ -88,9 +88,9 @@ $accounts = new viewTable();
                         } else {
                           echo '
                           <div class="container">
-                              <p class="lead text-center">
+                              <p class="lead text-center"><strong>
                                 The user&#39;s profile will only be visible if they have logged in to their own account. If you have any questions/problems feel free to
-                                <a class="text-white" href="#">contact us here.</a>
+                                <a class="text-white" href="#">contact us here.</a></strong>
                               </p>
                           </div>
                           ';
@@ -104,9 +104,9 @@ $accounts = new viewTable();
             <div class="col-6">
               <div class="ccard card mt-3 h-100 list-main">
                 <div class="chead card-header text-center">
-                    <span class="h3">List of Accounts</span>
+                    <span class="h3 font-italic">List of Accounts</span>
                 </div>
-                <div class="card-body text-center inner-list">
+                <div class="card-body text-center inner-list bg-primary">
                     <?php $accounts->viewAccounts() ?>
                 </div>
               </div>

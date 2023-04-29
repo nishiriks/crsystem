@@ -156,10 +156,22 @@ footer {
     padding-bottom: 3%;
     margin-bottom: 3%;
 }
+
 .btn-xl {
     width:50%;
 }
-
+.lead{
+  font-family: "Times New Roman", serif;
+}
+.nav-item{
+  font-family: "Georgia", serif;
+}
+.h3{
+  font-family: "Garamond", serif, "bold";
+}
+.col{
+  font-family: "Times New Roman", serif;
+}
 .btn-outline-light:hover,
 .btn-outline-light:active
 {
