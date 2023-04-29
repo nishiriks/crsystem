@@ -137,10 +137,10 @@ function vald(){
                         $login = $user->login(Input::get('username'),Input::get('password'),$remember);
                         if($login){
                             if($user->data()->groups == 1){
-                                 Redirect::to('template.php');
+                                 Redirect::to('index.php');
                                 echo $user->data()->groups;
                             }else{
-                                 Redirect::to('template.php');
+                                 Redirect::to('index.php');
                                 echo $user->data()->groups;
                             }
                         }else{
@@ -158,7 +158,7 @@ function vald(){
         function isLogin(){
             $user = new user();
             if(!$user->isLoggedIn()){
-                Redirect::to('login.php');
+                Redirect::to('index.php');
             }
         }
 
@@ -214,7 +214,7 @@ function updateProfile(){
                 } catch (Exception $e) {
                     die($e->getMessage());
                 }
-                Redirect::to('template.php');
+                Redirect::to('index.php');
             }else{
                 foreach ($validate->errors()as $error) {
                 pError($error);
@@ -255,7 +255,7 @@ function changeP(){
                     } catch (Exception $e) {
                         die($e->getMessage());
                     }
-                    Redirect::to('template.php');
+                    Redirect::to('index.php');
                 }
             }else{
                 foreach ($validate->errors()as $error) {

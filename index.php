@@ -1,63 +1,131 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.php';
+$accounts = new viewTable();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar Portal</title>
+  <title>Class Record Portal</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
+  <link rel="stylesheet" type="text/css"  href="resource/css/index.css">
+  <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-white shadow-sm">
-          <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top "
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
-        <div class="container-fluid p-0 ">
-            <div class="cover"></div>
-            <video id="videoBG" autoplay muted loop>
-                <source src="resource/mp4/bg.mp4" type="video/mp4">
-                </video>
-            <div class="container bg">
-                <div class="jumbotron">
-                    <h1 class="display-4 text-center bottomline">Office of the University Registrar <span class="ceucolor2">Portal</span></h1>
-                    <p class="text-center">The Centro Escolar University Office of the Registrar supports the college/schools
-and the university in realizing its commitment for the total development of students by providing
-efficient and quality service in terms of registering, updating, evaluating and safekeeping of
-student records, participating in curriculum making/revision and implementing the
-University and CHED policies, rules and regulations.</p>
-                    <p class="lead">
-                    <div class="container-fluid">
-                        <div class="col col-sm-12  text-center mt-5">
-                            <a class="btn btn-outline-light w-50 " href="alumniRegister.php" role="button">I'm an Alumni</a>
-                        </div>
-                        <div class="col col-sm-12  text-center mt-4">
-                            <a class="btn btn-outline-light w-50 " href="login.php" role="button">Log-in</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
+    <nav class="barnav navbar navbarlight shadow navbar-expand-md ">
+          <div class="container-fluid">
+            <div class="logo center">
+              <a href="#">
+                <img src="resource/img/logo2.png" height="115" class="d-inline-block align-top alt="alt="mdb logo"><h3 class="ib">
+              </a>
             </div>
-        </div>
-    </header>
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
-      <div class="container text-center">
-          <div class="row">
-              <div class="col col-sm-5 text-left">
-                  <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
-              </div>
-              <div class="col text-right">
-                  <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link navitem" href="login.php">Home</a>
+                <a class="nav-item nav-link navitem" href="changepassword.php">Change Password</a>
+                <a class="nav-item nav-link navitem" href="updateprofile.php">Update Profile</a>
+                <a class="nav-item nav-link navitem" href="logout.php">Log out</a>
               </div>
           </div>
-      </div>
-    </footer>
+        </nav>
+
+    <main class="container-fluid">
+        <div>
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="ccard card mt-3 h-100">
+                  <div class="chead card-header text-center">
+                      <span class="h3">Class Record System</span>
+                  </div>
+                  <div class="card-body">
+                      <div class="container">
+                        <p class="lead text-center">This Portal is for Teachers only. Proceed at your own risk. If you lacked the necessary credentials, Proceed to Register. Otherwise, proceed to Login.</p>
+                      </div>
+                      <form class="text-center" method="post">
+                          <a class="btn btn-info w-25" href="register.php" role="button"><strong>Register</strong></a>
+                          <?php
+                            $user = new user();
+                            if ($user->isLoggedIn()) {
+                              echo '<button class="btn btn-info w-25" name="logout"><strong>Logout</strong></button>';
+                                if (isset($_POST['logout'])) {
+                                  $user->logout();
+                                }
+                            } else {
+                              echo '<a class="btn btn-info w-25" href="login.php" role="button"><strong>Login</strong></a>';
+
+                            }
+                          ?>
+                      </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="ccard card mt-5 h-100">
+                    <div class="chead card-header text-center">
+                      <span class="h3">Profile</span>
+                    </div>
+                    <div class="card-body ">
+                      <?php
+                        $user = new user();
+                        if ($user->isLoggedIn()) {
+                          echo '<p class="leadfont-italic"><strong>WELCOME USER! HOW MAY I BE OF SERVICE.</strong></p>';
+                          echo '<div class="container d-flex">';
+                          profilePic();
+                          echo '
+                              <div class="container">
+                                <p><strong>Name: </strong>'.($user->data()->name).'</p>
+                                <p><strong>Username: </strong>'.($user->data()->username).'</p>
+                                <p><strong>Email: </strong>'.($user->data()->email).'</p>
+                              </div>
+                          ';
+                          echo '</div>';
+                        } else {
+                          echo '
+                          <div class="container">
+                              <p class="lead text-center"><strong>
+                                The user&#39;s profile will only be visible if they have logged in to their own account. If you have any questions/problems feel free to
+                                <a class="text-white" href="#">contact us here.</a></strong>
+                              </p>
+                          </div>
+                          ';
+                        }
+                      ?>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-6">
+              <div class="ccard card mt-3 h-100 list-main">
+                <div class="chead card-header text-center">
+                    <span class="h3 font-italic">List of Accounts</span>
+                </div>
+                <div class="card-body text-center inner-list">
+                    <?php $accounts->viewAccounts() ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom  slide-in-right">
+   <div class="container text-center">
+       <div class="row">
+           <div class="col col-sm-5 text-left">
+               <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
+           </div>
+           <div class="col text-right">
+               <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
+           </div>
+       </div>
+   </div>
+ </footer>
     <script src="vendor/js/jquery.js"></script>
     <script src="vendor/js/popper.js"></script>
     <script src="vendor/js/bootstrap.min.js"></script>
