@@ -133,7 +133,7 @@ $view = new view;
                <small>Copyright &copy;Westview University     All Rights Reserve 2023</small>
            </div>
            <div class="col text-right">
-               <small>Created by: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
+               <small>Group4: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
            </div>
        </div>
    </div>
