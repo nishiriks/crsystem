@@ -18,7 +18,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.p
   <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Jua&family=Lexend+Deca:wght@300;400&family=Raleway:ital,wght@0,100;0,200;1,100&family=Roboto+Slab:wght@100;500;600&family=Roboto:ital,wght@0,500;0,700;1,500&family=Rubik&family=Ruda:wght@800;900&family=Sen&family=Sigmar&family=Tilt+Warp&family=Ubuntu:ital,wght@0,500;0,700;1,700&family=Work+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
         <section>
            <div class="container-fluid">
               <div class="row justify-content-center">
@@ -50,10 +49,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.p
                   <div class="container text-center">
                     <div class="row">
                       <div class="col col-sm-5 text-left">
-                        <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
+                        <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
                       </div>
                       <div class="col text-right">
-                        <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
+                         <small>Group4: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
                       </div>
                     </div>
                   </div>

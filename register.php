@@ -112,7 +112,7 @@ $view = new view;
                                 <div class="form-group col-7">
                                     <label  >&nbsp;</label>
                                 <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
-                                 <input type="submit" value="Register New SRA" class=" form-control btn btn-primary" />
+                                 <input class="wave1" type="submit" value="Register New SRA" class=" form-control btn btn-primary" />
                                 </div>
                             </div>
                         </td>
@@ -130,7 +130,7 @@ $view = new view;
    <div class="container text-center">
        <div class="row">
            <div class="col col-sm-5 text-left">
-               <small>Copyright &copy;Westview University     All Rights Reserve 2023</small>
+               <small>Copyright &copy;Westview University     All Rights Reserved 2023</small>
            </div>
            <div class="col text-right">
                <small>Group4: Marcus Bustos, Ralph Cruz, Angelique Gabriel, Krizia Lleva, Roderick Nucup, Emman Siva.</small>
