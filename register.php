@@ -112,7 +112,7 @@ $view = new view;
                                 <div class="form-group col-7">
                                     <label  >&nbsp;</label>
                                 <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
-                                 <input type="submit" value="Register New SRA" class=" form-control btn btn-primary" />
+                                 <input class="wave1" type="submit" value="Register New SRA" class=" form-control btn btn-primary" />
                                 </div>
                             </div>
                         </td>

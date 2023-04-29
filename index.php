@@ -11,7 +11,7 @@ $accounts = new viewTable();
   <title>Registrar Portal</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"  href="resource/css/tables.css">
+  <link rel="stylesheet" type="text/css"  href="resource/css/index.css">
   <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
 </head>
 <body>
@@ -35,7 +35,7 @@ $accounts = new viewTable();
           </div>
         </nav>
 
-    <main class="container-fluid bg-info">
+    <main class="container-fluid">
         <div>
           <div class="row">
             <div class="col-6">
@@ -106,7 +106,7 @@ $accounts = new viewTable();
                 <div class="chead card-header text-center">
                     <span class="h3 font-italic">List of Accounts</span>
                 </div>
-                <div class="card-body text-center inner-list bg-primary">
+                <div class="card-body text-center inner-list">
                     <?php $accounts->viewAccounts() ?>
                 </div>
               </div>
