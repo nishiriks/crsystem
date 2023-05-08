@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: 109.106.254.194
-        username: bsit3567_group4
+        username: group4@bsitport2026.com
         password: ${{ secrets.FTP_PASSWORD }}
