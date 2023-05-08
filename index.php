@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.php';
-$accounts = new viewTable();
+$accounts = new viewtable();
  ?>
 
 <!DOCTYPE html>
