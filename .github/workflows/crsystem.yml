@@ -13,4 +13,4 @@ jobs:
       with:
         server: 109.106.254.194
         username: bsit3567_group4
-        password: ${{ secrets.FTP_PASSWORD }}
+        password: ${{ admin1234 }}
