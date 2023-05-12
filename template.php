@@ -1,14 +1,14 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/crsystem/resource/php/class/core/init.php';
-isLogin();
-$viewtable = new viewtable();
+// isLogin();
+// $viewtable = new viewtable();
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEU crsystem Portal</title>
+  <title>Class Record Portal Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -29,66 +29,49 @@ $viewtable = new viewtable();
 
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
+      <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
+        <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
+          alt="mdb logo"><h3 class="ib">
+      </a>
+         <a href="pending.php"><i class="fas fa-home ceucolor"></i></a>
+         <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
+         <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
+         <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
+    </nav>
+    <main class="container">
+        <div>
+          <div class="row">
+            <div class="col">
+              <div class="card mt-3 h-100">
+                <div class="card-header">
 
-        <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
-          <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="pending.php"><i class="fas fa-home ceucolor"></i></a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
+                </div>
+                <div class="card-body">
 
-        <div class="container mt-4 puff-in-center">
-          <?php $viewtable->viewApproveTable(); ?>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mt-3 h-100">
+                <div class="card-header">
+
+                </div>
+                <div class="card-body">
+                
+                </div>
+                <form class="" method="post">
+                  
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+    </main>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 <script src="vendor/js/bootstrap-select.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      window.$('#scholartable').DataTable({
-        dom: 'frtipB',
-        buttons: [
-            {
-                extend: 'excelHtml5',
-                className: 'btn btn-success',
-                text: 'Excel',
-                titleAttr: 'Export to Excel',
-                title: 'Scholarship Report',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            },
-            {
-                extend: 'csvHtml5',
-                className: 'btn btn-primary',
-                text: 'CSV',
-                titleAttr: 'CSV',
-                title: 'Scholarship Report',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            },
-            {
-                extend: 'pdfHtml5',
-                className: 'btn btn-danger',
-                text: 'PDF',
-                titleAttr: 'PDF',
-                title: 'Scholarship Report',
-                orientation: 'landscape',
-                pageSize: 'TABLOID',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            }
-        ]
-        });
-    });
-</script>
 </body>
 </html>

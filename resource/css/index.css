@@ -66,9 +66,7 @@
     color:#DC65A1;
     font-weight: bold;
 }
-.bg2{
 
-}
 .btn.ceubtn,
 .btn.ceubtn:hover,
 .btn.ceubtn:active
@@ -89,9 +87,58 @@
 }
 
 header{
-    height:100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
-    background-size: cover;
+    max-height:10vh;
+    background-color: #042446;
+}
+main {
+        height: 90vh;
+        background-color: #008E97;
+}
+footer {
+        max-height: 10vh;
+        background-color: #042446;
+}
+.ccard {
+        background-color: #8cbee0;
+}
+.chead {
+        background-color: #053f67;
+        color: white;
+}
+.inner-chead {
+        background-color: #16618d;
+}
+.inner-cbody {
+        background-color: #2a8fc7;
+}
+.card-title {
+        color: white;
+}
+.card {
+        border: none;
+}
+.list-main {
+        max-height: 75vh;
+        overflow-y: hidden;
+}
+.inner-list {
+        overflow-y: scroll;
+}
+.profpic {
+        width: 100px;
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+        width: 20px;
+}
+::-webkit-scrollbar-track {
+        background-color: #8cbee0;
+}
+::-webkit-scrollbar-thumb {
+        background-color:  #16618d;
+}
+::-webkit-scrollbar-thumb:hover {
+        background-color: #0d364e;
 }
 
 .alumni{
@@ -109,10 +156,22 @@ header{
     padding-bottom: 3%;
     margin-bottom: 3%;
 }
+
 .btn-xl {
     width:50%;
 }
-
+.lead{
+  font-family: "Times New Roman", serif;
+}
+.nav-item{
+  font-family: "Georgia", serif;
+}
+.h3{
+  font-family: "Garamond", serif, "bold";
+}
+.col{
+  font-family: "Times New Roman", serif;
+}
 .btn-outline-light:hover,
 .btn-outline-light:active
 {
